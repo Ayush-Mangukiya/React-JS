@@ -1,3 +1,4 @@
+// useContext helps in fetching values from userContext
 import React, {useState, useContext} from 'react'
 import UserContext from '../context/UserContext'
 
@@ -10,7 +11,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setUser({username, password})
+        setUser({username, password});
     }
  
   return (

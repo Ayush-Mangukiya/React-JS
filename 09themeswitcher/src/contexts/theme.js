@@ -12,4 +12,4 @@ export const ThemeProvider = ThemeContext.Provider
 // custom hooks
 export default function useTheme() {
     return useContext(ThemeContext)
-}
+} 
