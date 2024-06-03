@@ -1,4 +1,4 @@
-// Designing Custom Hooks
+// Designing Custom Hooks : make a .js file as it only returns only javaScript
 
 import { useEffect, useState } from "react";
 

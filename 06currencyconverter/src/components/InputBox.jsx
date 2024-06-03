@@ -9,8 +9,9 @@ import { useId } from 'react';
                         selectCurrency="usd",
                         amountDisable = false,
                         currencyDisable = false,
-                        className = ""}) {
+                        className = ""} /* to take css from user */) {
 
+    // Do not use useID to generate keys in a list
     const amountInputId = useId()  // It returns a unique random string
     
 
@@ -27,7 +28,7 @@ import { useId } from 'react';
                     placeholder="Amount"
                     disabled= {amountDisable}
                     value={amount}
-                    onchange = {(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+                    onChange = {(e) => onAmountChange && onAmountChange(Number(e.target.value))} // returned value bu event handlers are string so do necessary casting
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
@@ -35,6 +36,8 @@ import { useId } from 'react';
                 <select className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none" value={selectCurrency}
                         onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}        
                         disabled = {currencyDisable} >
+
+                        {/* while using loops in react, always remember to provide keys to improve performance */}
 
                         {currencyOption.map((Currency) => (
                             <option key={Currency} value={Currency}>
