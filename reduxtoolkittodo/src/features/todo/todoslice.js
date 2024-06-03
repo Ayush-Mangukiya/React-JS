@@ -1,17 +1,19 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
+// Initial state can either be object or array.
 const initialState = {
     todos: [{id: 1, text:"Hello World!"}]
 }
 
 export const todoSlice = createSlice({
-    name: 'todo', 
-    initialState,
-    reducers: {
+    name: 'todo', // It is name of the slice 
+    initialState, // Each slice has initial state
+    reducers: { // Each reducer has property (addTodo, removeTodo) and function, we always have access to state action
+        // state gives access to current state of values
         addTodo: (state, action) => {
             const todo = {
                             id: nanoid(), 
-                            text: action.payload
+                            text: action.payload // payload is an object
                         }
                         state.todos.push(todo)
         },

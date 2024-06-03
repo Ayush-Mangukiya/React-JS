@@ -1,14 +1,16 @@
-import React from 'react'
-import {useDispatch} from 'react-redux'
-import {addTodo} from '../features/todo/todoslice'
+import React from 'react';
+import {useDispatch} from 'react-redux';
+import {addTodo} from '../features/todo/todoslice';
 
 function AddTodo() {
 
     const [input, setInput] = React.useState('')
+    
     const dispatch = useDispatch()
 
     const addTodoHandler = (e) => {
         e.preventDefault()
+        // Dispatch made changes inside store via using reducers (addTodo , removeTodo ).
         dispatch(addTodo(input)) // we call reducer via dispatchor and can pass value inside of it
         setInput("")
     }
