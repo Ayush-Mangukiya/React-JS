@@ -15,15 +15,19 @@
 
 // [D] useDispatch : To send any value to store.  
 
-// first thing to do is create store. Next create reducers, here referred as slices. After it we have access to state inside of any components.
+// first thing to do is create store. Next create reducers, here referred as slice. After it we have access to state inside of any components.
 
 import logo from './logo.svg';
 import './App.css';
+import AddTodo from './Component/AddTodo';
+import Todos from './Component/Todos';
 
 function App() {
   return (
     <div className="App">
       <h1>Redux</h1>
+      <AddTodo />
+      <Todos />
     </div>
   );
 }

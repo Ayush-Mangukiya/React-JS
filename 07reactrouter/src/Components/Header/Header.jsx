@@ -1,6 +1,6 @@
 import React from 'react'
 
-// We use link in place of a tage as it leads to refreshment of entire page and that doesn't suits react.
+// We use link in place of a tag as it leads to refreshment of entire page and that doesn't suits react.
 import { Link, NavLink } from 'react-router-dom'
 
 export default function Header() {

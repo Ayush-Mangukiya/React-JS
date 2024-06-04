@@ -4,7 +4,7 @@
 // -> createContext
 // -> store it inside variable and throw it
 
-// (2) context gives you provider as it is giving only variable to us and we wrap yup all components inside this provider to give access to state to all 
+// (2) context gives you provider as it is giving only variable to us and we wrap up all components inside this provider to give access to state to all 
 // components. Provider provides data.
 
 // (3) Then we'll make a provider here UserContextProvider.jsx

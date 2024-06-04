@@ -39,7 +39,8 @@ const router = createBrowserRouter(
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
 
-      {/* suppose i want to route http://localhost:3000/1 or http://localhost:3000/2
+      {/* 
+          suppose i want to route http://localhost:3000/1 or http://localhost:3000/2
           then i'll use syntax like below that is "/:".
           we can access parameter userid in User component.
       */}
